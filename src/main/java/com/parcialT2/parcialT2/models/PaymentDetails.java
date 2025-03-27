@@ -11,7 +11,8 @@ public class PaymentDetails {
     private Product product;
     private double price;
     private Date date;
-    private int totalAmount;
+    private Double totalAmount;
+    private int amount;
 
     /**
      * @param id: Used to identify the Payment details
@@ -20,12 +21,14 @@ public class PaymentDetails {
      * @param date: used to know the date when the payments do
      * @param totalAmount: used to knows the amount
      */
-    public PaymentDetails(Integer id, Product product, double price, Date date, int totalAmount) {
+    public PaymentDetails(Integer id, Product product, double price, Date date, Double totalAmount, int amount) {
         this.id = id;
         this.product = product;
         this.price = price;
         this.date = date;
-        this.totalAmount = totalAmount;
+        this.amount = amount;
+        this.totalAmount = amount * price;
+
     }
 
     /**
@@ -64,7 +67,7 @@ public class PaymentDetails {
      * this methos is used to get the price about the product
      * @return price
      */
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -72,7 +75,7 @@ public class PaymentDetails {
      * this method is used to set the price about the product
      * @param price
      */
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -97,15 +100,19 @@ public class PaymentDetails {
      * @return totalAmount
      */
     public int getAmount() {
-        return totalAmount;
+        return amount;
     }
 
     /**
      * this method is used to set amount abput buy and final payment
      * @param totalAmount
      */
-    public void setTotalAmount(int totalAmount) {
+    public void setTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public Double getTotalAmount(){
+        return totalAmount;
     }
 }
 

@@ -9,10 +9,10 @@ public class paymentDetailsService {
     @Autowired
     private paymentDetailsRepository paymentDetailsRepository;
 
-    public PaymentDetails save(PaymentDetails paymentDetails){
-        Double TotalAmount = paymentDetails.getAmount() * paymentDetails.getPrice();
-        paymentDetails.setTotalAmount(TotalAmount);
-        return paymentDetailsRepository.save(paymentDetails);
+    public PaymentDetails save(PaymentDetails paymentDetail){
+        Double TotalAmount = paymentDetail.getAmount() * paymentDetail.getPrice();
+        paymentDetail.setTotalAmount(TotalAmount);
+        return paymentDetailsRepository.save(paymentDetail);
     }
 
     public PaymentDetails findById(Integer id){

@@ -10,7 +10,7 @@ class ProductTest {
 
     @BeforeEach
     void setUp() {
-        
+
     }
 
     @AfterEach

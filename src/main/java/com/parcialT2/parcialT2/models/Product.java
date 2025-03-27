@@ -39,6 +39,7 @@ public class Product {
 
     /**
      * method used to set the product ID
+     * @param id
      */
     public void setId(String id) {
         this.id = id;
@@ -54,6 +55,7 @@ public class Product {
 
     /**
      * method used to set the product name
+     * @param name about product
      */
     public void setName(String name) {
         this.name = name;
@@ -69,6 +71,7 @@ public class Product {
 
     /**
      * method used to set the product price
+     * @param price about the product
      */
     public void setPrice(double price) {
         this.price = price;

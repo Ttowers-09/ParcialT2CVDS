@@ -80,3 +80,4 @@ El flujo del proceso de pago es el siguiente:
 ![Imagen 30](resources/30.png)
 
 
+![Imagen 31](resources/diag.jpeg)

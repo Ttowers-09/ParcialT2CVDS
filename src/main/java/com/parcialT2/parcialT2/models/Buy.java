@@ -7,7 +7,7 @@ import java.util.List;
 @Document(collection = "buys")
 public class Buy {
     @Id
-    private int IdBuy;
+    private int idBuy;
     private List<PaymentDetails> paymentDetails;
     private double total;
 
@@ -17,7 +17,7 @@ public class Buy {
      * @param total: Used to identify the total about amount and price
      */
     public Buy(int idBuy, List<PaymentDetails> paymentDetails, double total) {
-        IdBuy = idBuy;
+        this.idBuy = idBuy;
         this.paymentDetails = paymentDetails;
         this.total = total;
     }
@@ -27,7 +27,7 @@ public class Buy {
      * @return idBuy
      */
     public int getIdBuy() {
-        return IdBuy;
+        return idBuy;
     }
 
     /**
@@ -35,7 +35,7 @@ public class Buy {
      * @param idBuy
      */
     public void setIdBuy(int idBuy) {
-        IdBuy = idBuy;
+        this.idBuy = idBuy;
     }
 
     /**
